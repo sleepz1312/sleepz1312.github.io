@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FullPage CSS Link-->
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <!--JQuery Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Deliverables</title>
+    <style>
+        /* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .l-left {
+            float: left;
+        }
+
+        .l-right {
+            float: right;
+        }
+
+        .end {
+            margin-top: 30px;
+            font-size: 3em;
+            font-weight: bold;
+            opacity: 0;
+            -webkit-transform: translateY(300px);
+            -ms-transform: translateY(300px);
+            transform: translateY(300px);
+            -webkit-transition: opacity, -webkit-transform 1s;
+            transition: opacity, transform 1s;
+            -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+        }
+
+        /* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Alegreya Sans', Arial, sans-serif;
+            text-transform: uppercase;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            color: black;
+            letter-spacing: .18em;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul,
+        li {
+            list-style-type: none;
+        }
+
+        /* NAV STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        .header-top {
+            background: rgba(0, 47, 77, .3);
+            height: 70px;
+            padding: 0 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 12;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            line-height: 70px;
+            height: 70px;
+        }
+
+        h1 a {
+            display: block;
+            padding: 0 10px;
+        }
+
+        .toggle-menu {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            position: relative;
+            top: 10px;
+        }
+
+        .toggle-menu i {
+            position: absolute;
+            display: block;
+            height: 2px;
+            background: white;
+            width: 30px;
+            left: 10px;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+        }
+
+        nav {
+            height: 0;
+            opacity: 0;
+            box-sizing: border-box;
+            background: rgba(0, 47, 77, .25);
+            position: fixed;
+            top: 70px;
+            width: 100%;
+            -webkit-transition: all 3s;
+            transition: all 3s;
+        }
+
+        /* SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        section {
+            text-align: center;
+            /*background: url('https://unsplash.it/1910/1221?image=626') no-repeat center / cover;*/
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 2.8em;
+        }
+
+        /* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+        #fp-nav ul li a span,
+        .fp-slidesNav ul li a span {
+            background: white;
+            width: 8px;
+            height: 8px;
+            margin: -4px 0 0 -4px;
+        }
+
+        #fp-nav ul li a.active span,
+        .fp-slidesNav ul li a.active span,
+        #fp-nav ul li:hover a.active span,
+        .fp-slidesNav ul li:hover a.active span {
+            width: 16px;
+            height: 16px;
+            margin: -8px 0 0 -8px;
+            background: transparent;
+            box-sizing: border-box;
+            border: 1px solid #24221F;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--FullPage JS Link-->
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <!--Anime JS link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <header>
+        <!-- <div class="header-top clearfix">
+            <h1 class="l-left"><a href="#firstSection">Your Logo</a></h1>
+            <a class="l-right toggle-menu" href="#">
+                <i></i>
+                <i></i>
+                <i></i>
+            </a>
+        </div> -->
+
+        <nav class="hide">
+            <ul id="menu">
+                <li data-menuanchor="firstSection">
+                    <a href="#firstSection" title="First Section">First Section
+                    </a>
+                </li>
+                <li data-menuanchor="secondSection">
+                    <a href="#secondSection" title="First Slide">First Slide
+
+                </li>
+                <li data-menuanchor="secondSection/1">
+                    <a href="#secondSection/1" title="Second Slide">Second Slide
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="fullpage">
+        <section class="vertical-scrolling">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                    header {
+                        text-align: center;
+                        font-size: xx-large;
+                    }
+
+                    * {
+                        box-sizing: border-box;
+                    }
+
+                    .column {
+                        float: left;
+                        width: 50%;
+                        padding: 0 10px;
+                    }
+
+                    .row {
+                        margin: 0 -5px;
+                    }
+
+
+                    @media screen and (max-width: 600px) {
+                        .column {
+                            width: 100%;
+                            display: block;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .card1 {
+                        text-align: center;
+                        font-size: larger;
+                    }
+
+                    .card2 {
+                        text-align: left;
+                        padding-right: 50px;
+                        font-size: larger;
+                    }
+
+                    .card3 {
+                        text-align: left;
+                        padding-right: 50px;
+                        font-size: x-large;
+                    }
+
+                    .h2 {
+                        font-size: x-large;
+                    }
+                </style>
+                <title>About Me</title>
+            </head>
+
+            <body>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+                <header>
+                    <h1>About Me</h1>
+                </header>
+                <div class="row">
+                    <div class="column">
+                        <div class="card1">
+                            <script>
+                                anime({
+                                    targets: '.card1',
+                                    translateX: 100,
+                                    direction: 'alternate',
+                                    loop: true,
+                                    delay: function (el, i, l) {
+                                        return i * 100;
+                                    },
+                                    endDelay: function (el, i, l) {
+                                        return (l - i) * 100;
+                                    }
+                                });
+                            </script>
+                            <img src="images/pfp.jpg" alt="Profile picture" width="300" height="333">
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card2">
+                            <script>
+                                anime({
+                                    targets: '.card2',
+                                    translateY: 200,
+                                    rotate: 180,
+                                    delay: anime.stagger(300, { start: 1000 }),
+                                    direction: 'alternate'
+                                });
+                            </script>
+                            <h2>Jia En</h2>
+
+                            <p>
+                                My name is Jia En and I'm a student at Republic Polytechnic (RP) studying
+                                Diploma in
+                                Digital Design and Development (DDDD).
+                            </p>
+
+                            <p>
+                                So far i've tried my hand at Python, HTML, Java Script as well as PHP
+                                languages. I've also learnt
+                                about designing and trying my hand at using the Adobe software. - Adobe XD,
+                                Adobe Illustrator, Adobe
+                                photoshop
+                                in my design classes.
+                            </p>
+
+                            <p>Age: </p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card3">
+                            <script>
+                                anime({
+                                    targets: '.card3',
+                                    innerHTML: [0, 18], //start and end values
+                                    easing: 'linear',
+                                    round: 1, //rounds off to zero decimal places
+                                    duration: 3000
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card4">
+                            <script>
+                                anime({
+                                    targets: '.card4',
+                                    translateX: 250,
+                                    direction: 'alternate',
+                                    loop: true,
+                                    easing: 'steps(3)'
+                                })
+                            </script>
+                            <a href="faveFood.html">next page >>></a>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </section>
+        <section class="vertical-scrolling">
+            <div class="horizontal-scrolling">
+                <p>
+                <h3><b><u>Contact Information:</u></b></h3>
+                </br> email: <a href="mailto:21024625@myrp.edu.sg">Send Email</a>
+                </p>
+                </a>
+            </div>
+            <div class="horizontal-scrolling">
+                <p>
+                <h3><b><u>Social Media:</u></b></h3>
+                </br> Instagram: <a href="https://www.instagram.com/jiaen1312/">@jiaen1312</a>
+                </br> Linkdin: <a href="https://www.linkedin.com/in/jiaen-low-378409210/">Jia En Linkdin profile</a>
+                </br> Github: <a href="https://github.com/sleepz1312">Jia En Github profile</a>
+                </p>
+                </h3>
+            </div>
+        </section>
+    </div>
+    <script>
+        // variables
+        var $header_top = $('.header-top');
+        var $nav = $('nav');
+
+        // toggle menu 
+        $header_top.find('a').on('click', function () {
+            $(this).parent().toggleClass('open-menu');
+        });
+
+        // fullpage customization
+        $('#fullpage').fullpage({
+            sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F'],
+            sectionSelector: '.vertical-scrolling',
+            slideSelector: '.horizontal-scrolling',
+            navigation: true,
+            slidesNavigation: true,
+            controlArrows: false,
+            anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
+            menu: '#menu',
+
+            afterLoad: function (anchorLink, index) {
+                $header_top.css('background', 'rgba(0, 47, 77, .3)');
+                $nav.css('background', 'rgba(0, 47, 77, .25)');
+                if (index == 5) {
+                    $('#fp-nav').hide();
+                }
+            },
+
+            onLeave: function (index, nextIndex, direction) {
+                if (index == 5) {
+                    $('#fp-nav').show();
+                }
+            },
+
+            afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                if (anchorLink == 'fifthSection' && slideIndex == 1) {
+                    $.fn.fullpage.setAllowScrolling(false, 'up');
+                    $header_top.css('background', 'transparent');
+                    $nav.css('background', 'transparent');
+                    $(this).css('background', '#374140');
+                    $(this).find('h2').css('color', 'white');
+                    $(this).find('h3').css('color', 'white');
+                    $(this).find('p').css(
+                        {
+                            'color': '#DC3522',
+                            'opacity': 1,
+                            'transform': 'translateY(0)'
+                        }
+                    );
+                }
+            },
+
+            onSlideLeave: function (anchorLink, index, slideIndex, direction) {
+                if (anchorLink == 'fifthSection' && slideIndex == 1) {
+                    $.fn.fullpage.setAllowScrolling(true, 'up');
+                    $header_top.css('background', 'rgba(0, 47, 77, .3)');
+                    $nav.css('background', 'rgba(0, 47, 77, .25)');
+                }
+            }
+        }); 
+    </script>
+</body>
+
+</html>

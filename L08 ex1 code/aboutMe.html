@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        .row {
+            margin: 0 -5px;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .card1 {
+            text-align: center;
+        }
+
+        .card2 {
+            text-align: left;
+            padding-right: 50px;
+
+        }
+
+        .card3 {
+            text-align: left;
+            padding-right: 50px;
+        }
+    </style>
+    <title>About Me</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <header>
+        <h1>About Me.</h1>
+    </header>
+    <div class="row">
+        <div class="column">
+            <div class="card1">
+                <script>
+                    anime({
+                        targets: '.card1',
+                        translateX: 100,
+                        direction: 'alternate',
+                        loop: true,
+                        delay: function (el, i, l) {
+                            return i * 100;
+                        },
+                        endDelay: function (el, i, l) {
+                            return (l - i) * 100;
+                        }
+                    });
+                </script>
+                <img src="images/pfp.jpg" alt="Profile picture" width="300" height="333">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card2">
+                <script>
+                    anime({
+                        targets: '.card2',
+                        translateY: 200,
+                        rotate: 180,
+                        delay: anime.stagger(300, { start: 1000 }),
+                        direction: 'alternate'
+                    });
+                </script>
+                <h2>Jia En</h2>
+                <br>
+                <a href="https://www.instagram.com/jiaen1312/">@jiaen1312</a>
+                </br>
+                <p>
+                    My name is Jia En and I'm a student at Republic Polytechnic (RP) studying Diploma in
+                    Digital Design and Development (DDDD).
+                </p>
+
+                <p>
+                    So far i've tried my hand at Python, HTML, Java Script as well as PHP languages. I've also learnt
+                    about designing and trying my hand at using the Adobe software. - Adobe XD, Adobe Illustrator, Adobe
+                    photoshop
+                    in my design classes.
+                </p>
+
+                <p>Age: </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card3">
+                <script>
+                    anime({
+                        targets: '.card3',
+                        innerHTML: [0, 18], //start and end values
+                        easing: 'linear',
+                        round: 1, //rounds off to zero decimal places
+                        duration: 3000
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card4">
+                <script>
+                    anime({
+                        targets: '.card4',
+                        translateX: 250,
+                        direction: 'alternate',
+                        loop: true,
+                        easing: 'steps(3)'
+                    })
+                </script>
+                <a href="faveFood.html">next page >>></a>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
